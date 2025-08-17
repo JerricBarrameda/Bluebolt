@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BlueBolt Portfolio – Fast, Modern & Responsive</title>
+    <meta name="description" content="A modern, blue-themed portfolio website for professionals. Fast, responsive, SEO-friendly with animated cards, looping typing effect, dark/light mode toggle, and a clean multi-section layout." />
+    <meta name="theme-color" content="#1e3a8a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BlueBolt Portfolio – Fast, Modern & Responsive" />
+    <meta property="og:description" content="A modern, blue-themed portfolio website for professionals. Fast, responsive, SEO-friendly with animations and dark mode." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/portrait.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24'%3E%3Cpath fill='%231e3a8a' d='M12 2L2 7l10 5l10-5zM2 17l10 5l10-5M2 12l10 5l10-5'/%3E%3C/svg%3E">
+
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="nav">
+      <div class="container nav__inner">
+        <a href="#home" class="brand">[Your Name]</a>
+        <nav class="tabs">
+          <a href="#home" class="tab">Home</a>
+          <a href="#projects" class="tab">Projects</a>
+          <a href="#services" class="tab">Services</a>
+          <a href="#contact" class="tab">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero / Home -->
+    <main id="home" class="section section--hero">
+      <div class="container hero">
+        <div class="hero__text">
+          <h1 class="hero__title">
+            <span id="typing" aria-label="typing introduction"></span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </h1>
+          <p class="hero__subtitle">A Modern Professional Focused on Excellence and Innovation.</p>
+          <a href="#contact" class="btn btn--primary">Get in Touch</a>
+        </div>
+
+        <div class="hero__portrait reveal">
+          <img
+            src="assets/portrait.jpg"
+            alt="Your portrait"
+            class="portrait"
+            onerror="this.src='https://via.placeholder.com/260';"
+          />
+        </div>
+      </div>
+
+      <!-- About + Cards -->
+      <section class="container about reveal">
+        <div class="about__text">
+          <h2 class="section__title">About Me</h2>
+          <p>
+            I'm a passionate and results-driven professional with experience in
+            [your industry/profession]. I help clients and businesses achieve
+            their goals through modern, user-friendly, and impactful solutions.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card pop">
+            <h3 class="card__title">Recent Work</h3>
+            <p class="card__body">Explore selected projects showcasing modern web builds, performance, and accessibility.</p>
+            <a href="#projects" class="card__link">View Projects →</a>
+          </article>
+
+          <article class="card pop">
+            <h3 class="card__title">What I Do</h3>
+            <p class="card__body">Web development, UI/UX design, and SEO optimization aimed at measurable results.</p>
+            <a href="#services" class="card__link">See Services →</a>
+          </article>
+
+          <article class="card pop">
+            <h3 class="card__title">Work With Me</h3>
+            <p class="card__body">Have a challenge? Let’s collaborate and turn your ideas into a delightful product.</p>
+            <a href="#contact" class="card__link">Contact Me →</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Projects</h2>
+        <div class="grid">
+          <article class="card pop hover-tilt">
+            <h3 class="card__title">Project Title</h3>
+            <p class="card__body">Brief description of the project and the tools/technologies used.</p>
+            <a href="#" class="card__link">View Project →</a>
+          </article>
+
+          <article class="card pop hover-tilt">
+            <h3 class="card__title">Project Title</h3>
+            <p class="card__body">Brief description of the project and the tools/technologies used.</p>
+            <a href="#" class="card__link">View Project →</a>
+          </article>
+
+          <article class="card pop hover-tilt">
+            <h3 class="card__title">Project Title</h3>
+            <p class="card__body">Brief description of the project and the tools/technologies used.</p>
+            <a href="#" class="card__link">View Project →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Services</h2>
+        <div class="grid">
+          <article class="card pop hover-tilt">
+            <h3 class="card__title">Web Development</h3>
+            <p class="card__body">Modern and responsive websites tailored to your brand and goals.</p>
+          </article>
+
+          <article class="card pop hover-tilt">
+            <h3 class="card__title">UI/UX Design</h3>
+            <p class="card__body">Clean, user-friendly interfaces that offer great user experience.</p>
+          </article>
+
+          <article class="card pop hover-tilt">
+            <h3 class="card__title">SEO Optimization</h3>
+            <p class="card__body">Improve your search rankings and attract the right audience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Contact</h2>
+        <form
+          class="form pop"
+          action="https://formspree.io/f/your_form_id"
+          method="POST"
+        >
+          <div class="form__row">
+            <input class="input" type="text" name="name" placeholder="Name" required />
+            <input class="input" type="email" name="email" placeholder="Email" required />
+          </div>
+          <textarea class="textarea" name="message" placeholder="Message" required></textarea>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> [Your Name]. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bottom-right Dark/Light Switch -->
+    <button class="theme-switch" id="themeSwitch" aria-label="Toggle dark mode">
+      <span class="switch__knob" id="switchKnob"></span>
+    </button>
+
+    <!-- Ko-fi Floating Chat Widget -->
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+      // delay load to ensure script is available
+      window.addEventListener('load', function () {
+        if (window.kofiWidgetOverlay) {
+          window.kofiWidgetOverlay.draw('jerricbarrameda', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support me',
+            'floating-chat.donateButton.background-color': '#323842',
+            'floating-chat.donateButton.text-color': '#fff'
+          });
+        }
+      });
+    </script>
+
+    <!-- App JS -->
+    <script>
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Typing effect (loop)
+      const fullText = "Hi, I'm Jerric Barrameda";
+      const typingEl = document.getElementById('typing');
+      const cursorEl = document.querySelector('.cursor');
+      let idx = 0, deleting = false;
+
+      function typeLoop() {
+        const speed = deleting ? 60 : 100;
+        const pause = 1500;
+
+        if (!deleting && idx < fullText.length) {
+          typingEl.textContent = fullText.slice(0, idx + 1);
+          idx++;
+          setTimeout(typeLoop, speed);
+        } else if (!deleting && idx === fullText.length) {
+          setTimeout(() => { deleting = true; typeLoop(); }, pause);
+        } else if (deleting && idx > 0) {
+          typingEl.textContent = fullText.slice(0, idx - 1);
+          idx--;
+          setTimeout(typeLoop, speed);
+        } else {
+          deleting = false;
+          setTimeout(typeLoop, 300);
+        }
+      }
+      typeLoop();
+      // blink cursor
+      setInterval(() => cursorEl.classList.toggle('cursor--off'), 500);
+
+      // Dark mode switch (persists via localStorage)
+      const switchBtn = document.getElementById('themeSwitch');
+      const knob = document.getElementById('switchKnob');
+      const LS_KEY = 'bb-theme';
+      const saved = localStorage.getItem(LS_KEY);
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        switchBtn.classList.add('on');
+      }
+
+      switchBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        switchBtn.classList.toggle('on', isDark);
+        localStorage.setItem(LS_KEY, isDark ? 'dark' : 'light');
+      });
+
+      // Reveal on scroll (simple AOS-like)
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('reveal--in');
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.reveal, .pop').forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
