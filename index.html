@@ -205,7 +205,7 @@
         const pause = 1000;
 
       if (!deleting && idx < fullText.length) {
-        typingEl.textContent = fullText.slice(0, idx);
+        typingEl.textContent = fullText.slice(0, idx + 1);
         idx++;
         setTimeout(typeLoop, speed);
       } else if (!deleting && idx === fullText.length) {
