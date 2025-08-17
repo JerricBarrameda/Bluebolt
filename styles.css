@@ -301,18 +301,19 @@ body{
 
 /* Typing cursor */
 .cursor{
-  display:inline-block;
+  display: inline-block;
   margin-left: 2px;
   font-weight: 800;
   color: var(--primary);
 }
+
+#typing {
+  white-space: nowrap;
+}
+
 .cursor--off{ opacity: 0; }
 
 .typing-text {
   white-space: normal;
-}
-
-#typing {
-  white-space: nowrap;
 }
 

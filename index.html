@@ -42,7 +42,8 @@
       <div class="container hero">
         <div class="hero__text">
           <h1 class="hero__title">
-            <span id="typing" aria-label="typing introduction"></span><span class="cursor" aria-hidden="true">|</span>
+            <span id="typing" aria-label="typing introduction"></span>
+            <span class="cursor" aria-hidden="true">|</span>
           </h1>
           <p class="hero__subtitle">A Modern Professional Focused on Excellence and Innovation.</p>
           <a href="#contact" class="btn btn--primary">Get in Touch</a>
@@ -204,7 +205,7 @@
         const pause = 1000;
 
       if (!deleting && idx < fullText.length) {
-        typingEl.textContent = fullText.slice(0, idx + 1);
+        typingEl.textContent = fullText.slice(0, idx);
         idx++;
         setTimeout(typeLoop, speed);
       } else if (!deleting && idx === fullText.length) {
@@ -217,10 +218,10 @@
         idx--;
       setTimeout(typeLoop, speed);
       } else {
-        
+
         typingEl.textContent = "\u00A0";
         deleting = false;
-        setTimeout(typeLoop, 300);
+        setTimeout(typeLoop, 200);
   } 
 }
 
