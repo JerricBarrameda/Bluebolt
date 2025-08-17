@@ -194,30 +194,35 @@
 
       // Typing effect (loop)
       const fullText = "Hey, I'm Jerric Barrameda";
-      const typingEl = document.getElementById('typing');
-      const cursorEl = document.querySelector('.cursor');
-      let idx = 0, deleting = false;
+const typingEl = document.getElementById('typing');
+const cursorEl = document.querySelector('.cursor');
+let idx = 0;
+let deleting = false;
 
-      function typeLoop() {
-        const speed = deleting ? 60 : 90;
-        const pause = 1000;
+function typeLoop() {
+  const speed = deleting ? 60 : 90;
+  const pause = 1000;
 
-        if (!deleting && idx < fullText.length) {
-          typingEl.textContent = fullText.slice(0, idx + 1);
-          idx++;
-          setTimeout(typeLoop, speed);
-        } else if (!deleting && idx === fullText.length) {
-          setTimeout(() => { deleting = true; typeLoop(); }, pause);
-        } else if (deleting && idx > 0) {
-          typingEl.textContent = fullText.slice(0, idx - 1);
-          idx--;
-          setTimeout(typeLoop, speed);
-        } else {
-          deleting = false;
-          setTimeout(typeLoop, 300);
-        }
-      }
+  if (!deleting && idx < fullText.length) {
+    typingEl.textContent = fullText.slice(0, idx + 1);
+    idx++;
+    setTimeout(typeLoop, speed);
+  } else if (!deleting && idx === fullText.length) {
+    setTimeout(() => {
+      deleting = true;
       typeLoop();
+    }, pause);
+  } else if (deleting && idx > 0) {
+    typingEl.textContent = fullText.slice(0, idx); // <-- just slice(0, idx)
+    idx--;
+    setTimeout(typeLoop, speed);
+  } else {
+    deleting = false;
+    setTimeout(typeLoop, 300);
+  }
+}
+
+typeLoop();
       // blink cursor
       setInterval(() => cursorEl.classList.toggle('cursor--off'), 500);
 

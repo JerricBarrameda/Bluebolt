@@ -312,3 +312,7 @@ body{
   white-space: normal;
 }
 
+#typing {
+  white-space: nowrap;
+}
+
