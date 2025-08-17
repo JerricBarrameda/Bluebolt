@@ -200,8 +200,8 @@
       let idx = 0, deleting = false;
 
       function typeLoop() {
-        const speed = deleting ? 70 : 100;
-        const pause = 1500;
+        const speed = deleting ? 60 : 90;
+        const pause = 1000;
 
         if (!deleting && idx < fullText.length) {
           typingEl.textContent = fullText.slice(0, idx + 1);
