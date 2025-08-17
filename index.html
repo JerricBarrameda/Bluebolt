@@ -194,13 +194,13 @@
       document.getElementById('year').textContent = new Date().getFullYear();
 
       // Typing effect (loop)
-      const fullText = "Hi, I'm Jerric Barrameda";
+      const fullText = "Hey, I'm Jerric Barrameda";
       const typingEl = document.getElementById('typing');
       const cursorEl = document.querySelector('.cursor');
       let idx = 0, deleting = false;
 
       function typeLoop() {
-        const speed = deleting ? 60 : 100;
+        const speed = deleting ? 50 : 100;
         const pause = 1500;
 
         if (!deleting && idx < fullText.length) {
