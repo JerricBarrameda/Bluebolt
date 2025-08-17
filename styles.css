@@ -302,7 +302,7 @@ body{
 /* Typing cursor */
 .cursor{
   display: inline-block;
-  margin-left: 2px;
+  margin-left: 0;
   font-weight: 800;
   color: var(--primary);
 }
